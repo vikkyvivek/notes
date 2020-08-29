@@ -1,0 +1,13 @@
+<div class="header w3-grey">
+    <span class="logo" (click)="onSideNavClick()">
+        <i class="fa fa-bars"></i>
+    </span>
+    <span class="title">
+        Notes
+    </span>
+    <div class="header-right">
+        <span (click)="addNewNote()"><i class="fa fa-edit icons">Add</i></span>
+        <span (click)="deleteSelectedNote()"><i class="fa fa-trash icons">Delete</i></span>
+        <span><input type="text" placeholder="search notes" (input)="onInputChange($event)"></span>
+    </div>
+</div>

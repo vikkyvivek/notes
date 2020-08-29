@@ -1,0 +1,35 @@
+.notes-title {
+    border-bottom: 1px solid grey;
+    min-height: 79px;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 20px;
+}
+
+.notes--main-content__full {
+    margin-left: 0%;
+}
+
+.notes--main-content__shared {
+    margin-left: 25%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.notes__content-editor {
+    min-height: 100%;
+    padding: 20px;
+    height: 76vh;
+}
+
+.notes__date {
+    margin: auto;
+    width: 50%;
+    padding: 5px;
+    font-style: italic;
+    font-weight: 400;
+    color: lightgray;
+    text-align: center;
+}

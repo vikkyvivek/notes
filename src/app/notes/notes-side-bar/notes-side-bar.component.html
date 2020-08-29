@@ -1,0 +1,21 @@
+<div class="w3-sidebar w3-light-grey w3-bar-block notes--side-nav__bar"
+    [ngClass]="sideNavStatus ? 'notes--side-nav__open' : 'notes--side-nav__close'">
+    <div *ngIf="searchedText" class="notes--side-nav__searched-text">
+        <span class="notes--side-nav__searched-label">Searched Text :</span> {{searchedText}}
+    </div>
+    <ng-container *ngFor="let note of notes">
+        <div class="notes--side-nav__container"
+            [ngClass]="selectedNoteId == note.id ? 'notes--side-nav__selected-note' : ''"
+            (click)="updateSelectedNote(note.id)" *ngIf="isNoteVisible(note)">
+            <div class="notes--side-nav__title" innerHtml="{{note.title | highlightSearch:searchedText}}">
+            </div>
+            <div class="notes--side-nav__content">
+                <span>{{note.dateTime | date:'shortTime'}}</span> | <span
+                    innerHtml="{{note.content | highlightSearch:searchedText}}"></span>
+            </div>
+        </div>
+    </ng-container>
+    <div class="notes--side-nav__no-notes" *ngIf="notes.length==0">
+        No Notes to Display
+    </div>
+</div>

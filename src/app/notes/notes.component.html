@@ -1,0 +1,12 @@
+<app-notes-header [sideNavStatus]="sideNavStatus" (toggleSideNav)="toggleSideNav($event)" (addNote)="addNewNote($event)"
+    (deleteNote)="deleteSelectedNote($event)" (searchNotes)="searchNotes($event)">
+</app-notes-header>
+
+
+<app-notes-side-bar [sideNavStatus]="sideNavStatus" [notes]="filteredNotes" [selectedNote$]="selectedNote$"
+    [searchedText]="searchedText" (updateCurrentSelection)="updateCurrentSelection($event)">
+</app-notes-side-bar>
+
+<app-notes-content-editor [sideNavStatus]="sideNavStatus" [selectedNote$]="selectedNote$"
+    (updateNote)="onNoteUpdate($event)">
+</app-notes-content-editor>

@@ -1,0 +1,41 @@
+.notes--side-nav {
+    &__bar {
+        border-right: 1px solid grey;
+    }
+    &__open {
+        width: 25%;
+    }
+    &__close {
+        width: 0%;
+    }
+    &__container {
+        padding: 5px;
+        border-bottom: 1px solid lightgrey;
+        cursor: pointer;
+    }
+    &__title {
+        font-weight: 700;
+        word-wrap: break-word;
+    }
+    &__content {
+        word-wrap: break-word;
+    }
+    &__selected-note {
+        background-color: #fffdaf;
+    }
+    &__no-notes {
+        padding: 40px;
+        text-align: center;
+    }
+    &__searched-text {
+        padding: 15px;
+    }
+    &__searched-label {
+        color: grey;
+        font-style: italic;
+    }
+}
+
+div .notes--side-nav__container:hover {
+    background-color: #fffee0;
+}

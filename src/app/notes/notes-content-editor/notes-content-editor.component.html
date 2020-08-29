@@ -1,0 +1,11 @@
+<div [ngClass]="sideNavStatus ? 'notes--main-content__shared' : 'notes--main-content__full'">
+    <div *ngIf="selectedNote" id="title" class="w3-container w3-teal notes-title" contenteditable="true"
+        [(ngModel)]="selectedNote.title" #ctrl="ngModel">
+    </div>
+    <div *ngIf="selectedNote" class="notes__date">
+        {{selectedNote.dateTime | date:'MMMM d, y, h:mm:ss a z'}}
+    </div>
+    <div *ngIf="selectedNote" id="content" class="notes__content-editor" contenteditable="true"
+        [(ngModel)]="selectedNote.content" #ctrl="ngModel">
+    </div>
+</div>
